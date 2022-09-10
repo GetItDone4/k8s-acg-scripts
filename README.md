@@ -26,3 +26,18 @@ Chmod 775 k8scontroler.bash
 ./k8scontroller.bash  
   
 kubeadm token create --print-join-command  
+  
+Activate metrics  
+  
+  wget  https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml  
+  
+Edit and add - vi components.yaml  
+  
+args:  
+  - --cert-dir=/tmp  
+  - --secure-port=4443  
+  - --kubelet-insecure-tls  (add this)  
+  
+kubectl create -f components.yaml  
+  
+kubectl top pod --all-namespaces  
