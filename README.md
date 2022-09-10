@@ -24,3 +24,5 @@ Only controller
 vi k8controller.bash  
 Chmod 775 k8scontroler.bash  
 ./k8scontroller.bash  
+  
+kubeadm token create --print-join-command  
