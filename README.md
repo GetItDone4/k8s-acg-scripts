@@ -14,7 +14,11 @@ sudo vi /etc/hosts
 private IP    k8s-control  
 private IP    k8s-worker1  
 private IP    k8s-worker2  
-  
+
+Go to root:
+
+sudo -i
+
 Copy and paste file k8sbase.bash for each node  
 vi k8sbase.bash  
 Chmod 775 k8sbase.bash  
