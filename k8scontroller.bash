@@ -5,4 +5,5 @@ mkdir -p $HOME/.kube
  cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
  chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl get nodes
-kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+# if below does not work check here for the latest url - https://docs.tigera.io/calico/latest/getting-started/kubernetes/quickstart
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/tigera-operator.yaml
