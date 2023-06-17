@@ -30,7 +30,11 @@ Chmod 775 k8scontroler.bash
 ./k8scontroller.bash  
   
 kubeadm token create --print-join-command  
-  
+
+Now add Networking on the controler node:
+curl https://raw.githubusercontent.com/projectcalico/calico/v3.26.0/manifests/calico-etcd.yaml -o calico.yaml
+kubectl apply -f calico.yaml
+
 Activate metrics  
   
   wget  https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml  
